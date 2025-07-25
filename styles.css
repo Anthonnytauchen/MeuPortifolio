@@ -1,0 +1,50 @@
+
+:root {
+    --cor-fundo-principal: #0e0e0e;
+    --cor-fundo-sidebar: #2c2c2e;
+    --cor-fundo-card: #38383a;
+    --cor-texto-primario: #f2f2f2;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-destaque: #FFC107;
+    --borda-radius: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-primario);
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    position: sticky;
+    top: 5vh;
+    background-color: var(--cor-fundo-sidebar);
+    padding: 40px ;
+    height: 90vh;
+    margin-top: 5vh;
+    margin-left: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+border-radius: var(--borda-radius);
+}
+
+.perfil .foto-container img {
+    width: 200px;  
+    height: 200px; 
+    border-radius: 50%;
+    border: 5px solid var(--cor-fundo-sidebar);
+    display: block;
+}
+.conteudo-principal {
+    flex-grow: 1; /* Ocupa todo o espaço restante */
+    padding: 40px;
+    overflow-y: auto; /* Permite rolar apenas esta área */
+}
