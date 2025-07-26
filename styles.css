@@ -1,6 +1,6 @@
 
 :root {
-    --cor-fundo-principal: #0e0e0e;
+    --cor-fundo-principal: #1c1c1c;
     --cor-fundo-sidebar: #2c2c2e;
     --cor-fundo-card: #38383a;
     --cor-texto-primario: #f2f2f2;
@@ -34,17 +34,109 @@ body {
     flex-direction: column;
     align-items: center;
 border-radius: var(--borda-radius);
+border: solid 0.3px white;
+animation: flutuar 6s ease-in-out infinite;
+}
+.divisor {
+    border: none;
+    height: 1px;
+    background-color: var(--cor-fundo-card);
+    width: 100%;
+    margin: 30px 0;
 }
 
 .perfil .foto-container img {
     width: 200px;  
     height: 200px; 
-    border-radius: 50%;
-    border: 5px solid var(--cor-fundo-sidebar);
+    border-radius: 15%;
     display: block;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    
 }
-.conteudo-principal {
-    flex-grow: 1; /* Ocupa todo o espaço restante */
+.conteudo-principal{
+    flex-grow: 1;
     padding: 40px;
-    overflow-y: auto; /* Permite rolar apenas esta área */
+    overflow-y: auto;
+}
+.icone-box{
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-destaque);
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 0.5rem;
+   
+}
+.informacoes-contato li{
+    display: flex;
+    align-items: center;
+    grid:15px ;
+    margin-bottom: 25px;
+    }
+.informacoes-contato ul{
+    list-style: none;
+    width: 100%;
+}
+.texto-box{
+    margin-left: 2vh;
+   
+}
+.texto-box p{
+    font-size: 0.75rem;
+    color: var(--cor-texto-secundario);
+}
+.texto-box a{
+    color: var(--cor-texto-primario);
+    text-decoration: none;
+    cursor: pointer;
+}
+.texto-box a:hover{
+   color: var(--cor-destaque);
+}
+.perfil h1{
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: var(--cor-texto-primario);
+    }
+.perfil p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    margin-top: 10px;
+    color: var(--cor-texto-secundario);
+    background-color: var(--cor-fundo-card);
+    padding: 0.5rem;
+    border-radius: 5px;
+}  
+.redes-sociais{
+    margin-top: 5rem;
+   
+}  
+.redes-sociais i{
+    padding: 10px;
+    color: var(--cor-texto-primario);
+}
+.redes-sociais i:hover{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    color: var(--cor-destaque);
+    border-radius: 5px;
+}
+
+
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(5px); 
+  }
+  50% {
+    transform: translateY(-20px); 
+  }
+  100% {
+    transform: translateY(5px); 
+  }
 }
